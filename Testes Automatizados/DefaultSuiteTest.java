@@ -37,9 +37,163 @@ public class DefaultSuiteTest {
     driver.quit();
   }
   @Test
-  public void testeadicionarcoleo() {
+  public void testaddcolecaolimitemaximocaracteresexcedidonome() {
     driver.get("http://localhost:5173/");
     driver.manage().window().setSize(new Dimension(1366, 728));
+    {
+      WebElement element = driver.findElement(By.cssSelector(".surface-bg .v-toolbar-title__placeholder"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".surface-bg .v-toolbar-title__placeholder"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-btn--elevated"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn--elevated")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    driver.findElement(By.id("input-45")).click();
+    driver.findElement(By.id("input-45")).sendKeys("Coleção Magnífica dos Clássicos Literários e Históricos da Humanidade: Uma Jornada Através dos Século");
+    driver.findElement(By.id("input-47")).click();
+    driver.findElement(By.id("input-47")).click();
+    driver.findElement(By.id("input-47")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".bg-primary > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.id("input-47")).sendKeys("A coleção é um tesouro literário que reúne obras fundamentais que moldaram a cultura e a literatura ocidental ao longo dos séculos.");
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".bg-primary > .v-btn__content"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    driver.findElement(By.cssSelector(".bg-primary > .v-btn__content")).click();
+    driver.findElement(By.cssSelector(".v-snackbar__content")).click();
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-snackbar__content"));
+      assert(elements.size() > 0);
+    }
+  }
+  @Test
+  public void testaddcolecaonomecontendocaracteresinvisiveis() {
+    driver.get("http://localhost:5173/");
+    driver.manage().window().setSize(new Dimension(1366, 728));
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".surface-bg .v-toolbar-title__placeholder"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn--elevated")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    driver.findElement(By.id("input-45")).click();
+    driver.findElement(By.id("input-45")).sendKeys("Sagas ​do ‎Tempo");
+    driver.findElement(By.id("input-47")).click();
+    driver.findElement(By.id("input-47")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".bg-primary > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.id("input-47")).sendKeys("Coleção épica de livros que transporta os leitores através das eras.");
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".bg-primary > .v-btn__content"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    driver.findElement(By.cssSelector(".bg-primary > .v-btn__content")).click();
+    driver.findElement(By.cssSelector(".v-snackbar__content")).click();
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-snackbar__content"));
+      assert(elements.size() > 0);
+    }
+  }
+  @Test
+  public void testaddautorinjecaosql() {
+    driver.get("http://localhost:5173/");
+    driver.manage().window().setSize(new Dimension(1366, 728));
+    {
+      WebElement element = driver.findElement(By.cssSelector(".surface-bg .v-toolbar-title__placeholder"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--block:nth-child(2)"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn--block:nth-child(2)")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".surface-bg"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-btn--elevated"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
     {
       WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated > .v-btn__content"));
       Actions builder = new Actions(driver);
@@ -51,10 +205,288 @@ public class DefaultSuiteTest {
       Actions builder = new Actions(driver);
       builder.moveToElement(element, 0, 0).perform();
     }
-    driver.findElement(By.id("input-15")).click();
-    driver.findElement(By.id("input-15")).sendKeys("Romances do Século XIX");
-    driver.findElement(By.id("input-17")).click();
-    driver.findElement(By.id("input-17")).sendKeys("Romances escritos no século XIX.");
+    driver.findElement(By.id("input-88")).click();
+    driver.findElement(By.id("input-88")).sendKeys("José da Silva\'; DROP TABLE autor; --");
+    driver.findElement(By.id("input-90")).click();
+    driver.findElement(By.cssSelector(".v-list-item:nth-child(25) .v-list-item-title")).click();
+    driver.findElement(By.id("input-94")).click();
+    js.executeScript("window.scrollTo(0,0)");
+    {
+      WebElement element = driver.findElement(By.cssSelector(".bg-primary > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.id("input-94")).sendKeys("01/03/1965");
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".bg-primary > .v-btn__content"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".bg-primary > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
     driver.findElement(By.cssSelector(".bg-primary > .v-btn__content")).click();
+    driver.findElement(By.cssSelector(".v-snackbar__content")).click();
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-snackbar__content"));
+      assert(elements.size() > 0);
+    }
+  }
+  @Test
+  public void testaddlivroisbninvalido() {
+    driver.get("http://localhost:5173/");
+    driver.manage().window().setSize(new Dimension(1366, 728));
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-btn--block:nth-child(3)"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--block:nth-child(3)"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn--block:nth-child(3)")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    js.executeScript("window.scrollTo(0,167.5)");
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-btn--elevated > .v-btn__content"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn--elevated > .v-btn__content")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    driver.findElement(By.id("input-77")).click();
+    driver.findElement(By.id("input-77")).sendKeys("97814127890");
+    driver.findElement(By.id("input-79")).click();
+    driver.findElement(By.id("input-79")).sendKeys("O Hobbit");
+    driver.findElement(By.id("input-82")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-row:nth-child(2) .v-btn"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.id("input-82")).sendKeys("01/01/1937");
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-row:nth-child(2) .v-btn"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-row:nth-child(4) .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-row:nth-child(4) .v-btn__content"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-row:nth-child(4) .v-btn"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.id("input-84")).click();
+    driver.findElement(By.id("input-84")).sendKeys(Keys.DOWN);
+    driver.findElement(By.id("input-84")).sendKeys("fanta");
+    driver.findElement(By.cssSelector(".v-list-item-title")).click();
+    driver.findElement(By.cssSelector(".v-row:nth-child(2) .v-btn__content")).click();
+    driver.findElement(By.cssSelector(".v-chip__content")).click();
+    driver.findElement(By.cssSelector(".v-chip__content")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-chip__content"));
+      Actions builder = new Actions(driver);
+      builder.doubleClick(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-chip__content")).click();
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-chip__content"));
+      assert(elements.size() > 0);
+    }
+    driver.findElement(By.id("input-88")).click();
+    driver.findElement(By.id("input-88")).sendKeys(Keys.DOWN);
+    driver.findElement(By.id("input-88")).sendKeys("john");
+    driver.findElement(By.cssSelector(".v-autocomplete__unmask:nth-child(3)")).click();
+    driver.findElement(By.cssSelector(".v-row:nth-child(4) .v-btn")).click();
+    driver.findElement(By.cssSelector(".v-row:nth-child(5) .v-chip")).click();
+    driver.findElement(By.cssSelector(".v-row:nth-child(5) .v-chip")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-row:nth-child(5) .v-chip"));
+      Actions builder = new Actions(driver);
+      builder.doubleClick(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-row:nth-child(5) .v-chip__content")).click();
+    driver.findElement(By.cssSelector(".v-row:nth-child(5) .v-chip__content")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-row:nth-child(5) .v-chip__content"));
+      Actions builder = new Actions(driver);
+      builder.doubleClick(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-row:nth-child(5) .v-chip__content")).click();
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-row:nth-child(5) .v-chip__content"));
+      assert(elements.size() > 0);
+    }
+    driver.findElement(By.id("input-92")).click();
+    driver.findElement(By.id("input-92")).sendKeys("328");
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--variant-flat"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.id("input-94")).sendKeys("10");
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-btn--variant-flat"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--variant-flat > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn--variant-flat > .v-btn__content")).click();
+    driver.findElement(By.cssSelector(".v-snackbar__content")).click();
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-snackbar__content"));
+      assert(elements.size() > 0);
+    }
+  }
+  @Test
+  public void testleitorsenhaconfirmacaosenhadiferentes() {
+    driver.get("http://localhost:5173/");
+    driver.manage().window().setSize(new Dimension(1366, 728));
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-btn:nth-child(4) .v-toolbar-title__placeholder"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn:nth-child(4) .v-toolbar-title__placeholder"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn:nth-child(4) .v-toolbar-title__placeholder")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    js.executeScript("window.scrollTo(0,153.75)");
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-btn--elevated > .v-btn__content"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".v-btn--elevated > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".v-btn--elevated > .v-btn__content")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    driver.findElement(By.id("input-69")).sendKeys("rbfreli@gmail.com");
+    driver.findElement(By.id("input-71")).sendKeys("Rosa10#12");
+    driver.findElement(By.id("input-63")).click();
+    driver.findElement(By.id("input-63")).click();
+    driver.findElement(By.id("input-63")).sendKeys("Luciana Torres");
+    driver.findElement(By.id("input-65")).click();
+    driver.findElement(By.id("input-65")).sendKeys("41107935059");
+    driver.findElement(By.id("input-67")).click();
+    driver.findElement(By.id("input-67")).sendKeys("88993570020");
+    driver.findElement(By.cssSelector(".v-overlay--active")).click();
+    driver.findElement(By.id("input-69")).sendKeys("luciana@alu.ufc.br");
+    driver.findElement(By.id("input-71")).click();
+    driver.findElement(By.id("input-71")).click();
+    {
+      WebElement element = driver.findElement(By.id("input-71"));
+      Actions builder = new Actions(driver);
+      builder.doubleClick(element).perform();
+    }
+    driver.findElement(By.id("input-71")).sendKeys("Luciana#56");
+    driver.findElement(By.id("input-73")).click();
+    {
+      WebElement element = driver.findElement(By.cssSelector(".bg-primary > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.id("input-73")).sendKeys("Luciana#57");
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".bg-primary > .v-btn__content"));
+      assert(elements.size() > 0);
+    }
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    {
+      WebElement element = driver.findElement(By.cssSelector(".bg-primary > .v-btn__content"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element).perform();
+    }
+    driver.findElement(By.cssSelector(".bg-primary > .v-btn__content")).click();
+    {
+      WebElement element = driver.findElement(By.tagName("body"));
+      Actions builder = new Actions(driver);
+      builder.moveToElement(element, 0, 0).perform();
+    }
+    driver.findElement(By.cssSelector(".v-snackbar__content")).click();
+    {
+      List<WebElement> elements = driver.findElements(By.cssSelector(".v-snackbar__content"));
+      assert(elements.size() > 0);
+    }
   }
 }
